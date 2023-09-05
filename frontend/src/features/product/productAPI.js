@@ -24,7 +24,7 @@ export function fetchProductsByFilters(filter, sort, pagination) {
   // pagination = {_page:1,_limit=10} 
   // TODO : on server we will support multi values in filter
   let queryString = '';
-  for (let key in filter) {
+  for (let key in filter) { 
     const categoryValues = filter[key];
     if (categoryValues.length) {
       const lastCategoryValue = categoryValues[categoryValues.length - 1]
