@@ -1,4 +1,4 @@
-export function createUser(userData) {
+  export function createUser(userData) {
   return new Promise(async (resolve) => {
     const response = await fetch('http://localhost:8080/users', {
       method: 'POST',
@@ -15,7 +15,7 @@ export function checkUser(loginInfo) {
   return new Promise(async (resolve, reject) => {
     const email = loginInfo.email;
     const password = loginInfo.password;
-    const response = await fetch('http://localhost:8080/users?email=' + email);
+    const response = await fetch('http://localhost:8080/users?email=' + email);//email glat hai
     const data = await response.json();
     console.log({ data })
     if (data.length) {
